@@ -30,3 +30,4 @@ Para a realização desse projeto foram utilizadas as seguintes tecnologias/ling
 
 - HTML
 - CSS
+- JS
