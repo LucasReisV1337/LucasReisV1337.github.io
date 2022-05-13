@@ -123,14 +123,199 @@ img {
   display: flex;
   margin-right: 2rem;
 }
+.mobile-menu {
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: white;
+  margin: 9px;
+}
+.nome-nav-mobile,
+.logo-nav-mobile {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .mobile-container {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+  }
+  .container-botao-mobile {
+    font-size: 2.4rem;
+    padding: 0rem 1.3rem;
+    background: black;
+    transition: background 0.5s ease-out;
+    border-radius: 0.5rem;
+  }
+  .container-botao-mobile:hover {
+    background: var(--main-blue);
+  }
+  .saudacao,
+  .foto-bg {
+    display: none;
+  }
+
+  .mobile-container {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 23rem;
+  }
+
+  .container-botao-mobile {
+    position: relative;
+    left: 5rem;
+    bottom: 13rem;
+    width: 18.5rem;
+  }
+  .text-mobile1 {
+    font-size: 3rem;
+    position: relative;
+    bottom: 15rem;
+    left: 7rem;
+    color: black;
+  }
+
+  .text-mobile2 {
+    font-size: 6rem;
+    position: relative;
+    bottom: 15rem;
+  }
+
+  .text-mobile3 {
+    font-size: 3rem;
+    position: relative;
+    bottom: 15rem;
+    color: black;
+  }
+  .logo-nav-mobile {
+    display: flex;
+    width: 7rem;
+    position: relative;
+    top: 2.5rem;
+    right: 41rem;
+  }
+  .nome-nav-mobile {
+    display: flex;
+    position: relative;
+    right: 33rem;
+    bottom: 5rem;
+    font-size: 3.5rem;
+  }
+  .nome-nav,
+  .logo-nav {
+    display: none;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    width: 90vw;
+    height: 92vh;
+    background: black;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    position: relative;
+    bottom: 10rem;
+    opacity: 1;
+  }
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    bottom: 46.5rem;
+    right: 37rem;
+  }
+  .me-encontre-mobile {
+    display: flex;
+    align-items: center;
+    background: black;
+    font-size: 3rem;
+    width: 25rem;
+    height: 5rem;
+    position: relative;
+    left: 2rem;
+    bottom: 5rem;
+    border-radius: 0.5rem;
+  }
+  .k {
+    position: relative;
+    bottom: 2rem;
+    width: 30rem;
+    height: 0.4rem;
+    background-color: white;
+  }
+  .l {
+    position: relative;
+    left: 2rem;
+  }
+  .itens-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    right: 1rem;
+    bottom: 3rem;
+  }
+  #a,
+  #b,
+  #c {
+    font-size: 4srem;
+  }
+}
+.nav-list.active {
+  transform: translateX(0);
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: rotateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 @media (max-width: 28.75em) {
+  .nav-list a:hover {
+    background: var(--main-blue);
+    width: 30rem;
+  }
   .nav {
-    justify-content: center;
+    height: 7rem;
+    width: 100%;
+    position: fixed;
+  }
+
+  .nome-nav {
+    width: none;
+    height: none;
   }
 
   .nav-list {
-    margin: 0 1rem;
+    position: relative;
+    left: 7rem;
+  }
+
+  #quem-sou-eu-icone,
+  #habilidades-icone,
+  #projetos-icone,
+  #contato-icone {
+    width: 1px;
   }
 }
 
@@ -169,6 +354,13 @@ img {
 }
 
 /* Welcome section */
+@media (max-width: 28.75em) {
+  .foto-bg,
+  .foto-perfil {
+    display: none;
+  }
+}
+
 .foto-bg .foto-perfil {
   width: 60rem;
   height: 50rem;
